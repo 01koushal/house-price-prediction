@@ -4,12 +4,26 @@
     <title>House Price Predictor</title>
 </head>
 <body>
-    <h1>Enter House Features</h1>
+    <h1>Enter House Details</h1>
     <form method="POST" action="/predict">
-        {% for col in columns %}
-            <label>{{ col }}</label><br>
-            <input type="text" name="{{ col }}"><br><br>
-        {% endfor %}
+        <label>Overall Quality (1-10)</label><br>
+        <input type="number" name="Overall Qual" required><br><br>
+
+        <label>Living Area (sq ft)</label><br>
+        <input type="number" name="Gr Liv Area" required><br><br>
+
+        <label>Garage Capacity (Cars)</label><br>
+        <input type="number" name="Garage Cars" required><br><br>
+
+        <label>Total Basement Area (sq ft)</label><br>
+        <input type="number" name="Total Bsmt SF" required><br><br>
+
+        <label>Full Bathrooms</label><br>
+        <input type="number" name="Full Bath" required><br><br>
+
+        <label>Year Built</label><br>
+        <input type="number" name="Year Built" required><br><br>
+
         <input type="submit" value="Predict">
     </form>
 </body>
