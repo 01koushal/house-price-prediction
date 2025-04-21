@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Predicted Price</title>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-card {
+            background-color: white;
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #2f855a;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>🏠 Predicted House Price:</h1>
-    <h2>${{ prediction }}</h2>
-    <a href="/">Predict Another</a>
+    <div class="result-card">
+        <h1>🏠 Predicted House Price</h1>
+        <h2>${{ prediction }}</h2>
+        <a href="/">🔄 Predict Another</a>
+    </div>
 </body>
+
 </html>
