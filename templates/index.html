@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+</head>
+<body>
+    <h1>Enter House Features</h1>
+    <form method="POST" action="/predict">
+        {% for col in columns %}
+            <label>{{ col }}</label><br>
+            <input type="text" name="{{ col }}"><br><br>
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
